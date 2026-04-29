@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | DevLog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="tailwind.config.js"></script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-800 flex items-center justify-center min-h-screen p-4">
+
+    <div class="bg-white p-8 rounded-[2.5rem] shadow-2xl w-full max-w-md border border-gray-100">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-black tracking-tighter">DEV<span class="text-blue-600">LOG.</span></h1>
+            <p id="auth-subtitle" class="text-gray-400 font-medium">Welcome back, creator.</p>
+        </div>
+
+        <button id="google-btn" class="w-full flex items-center justify-center gap-3 border border-gray-200 py-4 rounded-2xl font-bold hover:bg-gray-50 transition mb-6">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="G" class="w-5 h-5">
+            Continue with Google
+        </button>
+
+        <div class="relative flex py-3 items-center mb-6">
+            <div class="flex-grow border-t border-gray-100"></div>
+            <span class="flex-shrink mx-4 text-gray-300 text-xs font-black uppercase tracking-widest">Or Email</span>
+            <div class="flex-grow border-t border-gray-100"></div>
+        </div>
+
+        <form id="auth-form" class="space-y-4">
+            <div id="username-container" class="hidden">
+                <input type="text" id="reg-username" placeholder="Full Name" 
+                       class="w-full bg-gray-50 border-none px-6 py-4 rounded-2xl focus:ring-2 focus:ring-blue-100 outline-none transition">
+            </div>
+
+            <input type="email" id="auth-email" placeholder="Email address" required
+                   class="w-full bg-gray-50 border-none px-6 py-4 rounded-2xl focus:ring-2 focus:ring-blue-100 outline-none transition">
+
+            <div class="relative">
+                <input type="password" id="auth-password" placeholder="Password" required
+                       class="w-full bg-gray-50 border-none px-6 py-4 rounded-2xl focus:ring-2 focus:ring-blue-100 outline-none transition pr-14">
+                <button type="button" id="toggle-pass-btn" class="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-blue-600 transition-colors">
+                    <span id="eye-icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    </span>
+                </button>
+            </div>
+
+            <button type="submit" id="auth-submit-btn" class="w-full bg-blue-600 text-white py-4 rounded-2xl font-black shadow-lg shadow-blue-100 hover:bg-blue-700 transition">
+                Login
+            </button>
+        </form>
+
+        <div class="text-center mt-6">
+            <button id="resend-email-btn" class="hidden text-xs font-bold text-blue-600 hover:underline">
+                Didn't get an email? Resend verification link
+            </button>
+        </div>
+
+        <p class="text-center mt-8 text-sm font-bold text-gray-400">
+            <span id="toggle-text">New to DevLog?</span> 
+            <button id="toggle-mode-link" class="text-blue-600 hover:underline ml-1">Create Account</button>
+        </p>
+    </div>
+
+    <script type="module" src="login.js"></script>
+</body>
+</html>

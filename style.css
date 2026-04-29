@@ -1,0 +1,147 @@
+/* --- 1. Universal & Typography --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: #f9fafb;
+    color: #111827;
+    line-height: 1.5;
+}
+
+/* --- 2. Layout & Containers --- */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* --- 4. Text Truncation (Library Fix) --- */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+.truncate-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+/* --- 5. Profile & Icons --- */
+
+/* The big profile box */
+#user-icon {
+    width: 120px;
+    height: 120px;
+    background: #eff6ff;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid white;
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+#user-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Mini Nav Icon */
+.nav-profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 1px solid #e2e8f0;
+}
+
+/* --- 6. Form & Auth UI --- */
+input {
+    transition: all 0.2s ease;
+}
+
+input:focus {
+    background-color: white !important;
+    box-shadow: 0 0 0 4px #dbeafe;
+}
+
+input::placeholder {
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+/* Eye Icon SVG Styling */
+#eye-icon-container svg {
+    color: #94a3b8;
+    display: block;
+}
+
+#toggle-pass-btn:hover #eye-icon-container svg {
+    color: #2563eb;
+}
+
+/* --- 7. Article Content Styling --- */
+#post-content h2, #full-content h2 { 
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 2rem 0 1rem;
+    letter-spacing: -0.025em;
+}
+
+#post-content p, #full-content p {
+    margin-bottom: 1.5rem;
+    color: #374151;
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+#post-content img, #full-content img {
+    max-width: 100%;
+    border-radius: 2rem;
+    margin: 2.5rem 0;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+/* --- 8. Buttons --- */
+.btn-blue {
+    background-color: #2563eb;
+    color: white;
+    font-weight: 800;
+    padding: 1rem 2rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+    transition: all 0.2s ease;
+}
+
+.btn-blue:active {
+    transform: scale(0.95);
+}
+
+/* Editor Placeholder */
+[contenteditable="true"]:empty:before {
+    content: attr(data-placeholder);
+    color: #cbd5e1;
+    cursor: text;
+}
