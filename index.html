@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevLog | Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="tailwind.config.js"></script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-200">
+
+    <header class="bg-white/80 dark:bg-black/75 backdrop-blur-md sticky top-0 z-0 border-b border-gray-100 dark:border-gray-800">
+        <nav class="flex justify-between items-center max-w-4xl mx-auto">
+            <button onclick="toggleMenu()" id="open-btn" class="p-4 focus:outline-none hover:text-red-800 group">
+        <div class="space-y-2">
+            <span class="block w-8 h-1 bg-gray-600 group-hover:bg-blue-500 transition-colors"></span>
+            <span class="block w-8 h-1 bg-gray-600 group-hover:bg-blue-500 transition-colors"></span>
+            <span class="block w-8 h-1 bg-gray-600 group-hover:bg-blue-500 transition-colors"></span>
+        </div>
+    </button>
+            <a href="index.html" class="p-4 text-3xl font-black tracking-tighter">
+               DEV<span class="text-blue-600">LOG.</span>
+            </a>
+        <div id="nav-right" class="flex items-center gap-4 px-1">
+            <div class="h-10 w-24 bg-gray-100 dark:bg-gray-800 animate-pulse rounded-xl"></div>
+        </div>
+        </nav>
+    </header>
+   <div id="overlay" onclick="toggleMenu()" class="fixed inset-0 bg-black bg-opacity-75 z-40 transition-opacity hidden"></div>
+   <div id="side-panel" class="fixed top-0 left-0 h-full w-64 dark:bg-gray-900 bg-gray-50 shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
+       
+       <div class="flex justify-end p-4">
+           <button id="close-btn" onclick="toggleMenu()" class="text-gray-500 dark:text-gray-50 hover:text-red-500 text-2xl font-bold">&times;</button>
+       </div>
+       <nav class="mt-10 px-6 space-y-4 mb-20">
+           <hr class="border-gray-100 dark:border-black" />
+           <a href="index.html" class="block text-lg font-semibold text-gray-700 dark:text-gray-100 hover:text-blue-600 transition">Home</a>
+           <hr class="border-gray-100 dark:border-black">
+           <a href="dashboard.html" class="block text-lg font-semibold text-gray-700 dark:text-gray-100 hover:text-blue-600 transition">Write</a>
+           <hr class="border-gray-100 dark:border-black">
+           <a href="#" class="block text-lg font-semibold text-gray-700 dark:text-gray-100 hover:text-blue-600 transition">Contact</a>
+           <hr class="border-gray-100 dark:border-black" />
+       </nav>
+       <div class="fixed bottom-0 w-full h-[4rem] bg-blue-600 inset-shadow-sm inset-shadow-indigo-500 inline-flex items-center">
+                  <button id="theme-toggle" class="absolute right-0 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium rounded-lg group bg-gray-100 dark:bg-gray-800 dark:text-white shadow-xl ">
+            <span class="px-5 py-2 transition-all ease-in duration-75 bg-white dark:bg-slate-900 rounded-md group-hover:bg-opacity-0">
+                <span id="theme-toggle-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                    <line x1="8" y1="21" x2="16" y2="21" />
+                    <line x1="12" y1="17" x2="12" y2="21" />
+                    </svg>
+                </span>
+            </span>
+        </button>
+       </div>
+   </div>
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        <div class="mb-12">
+            <h1 class="text-4xl font-black tracking-tight">The Feed</h1>
+            <p class="text-gray-400 dark:text-gray-500 font-medium">Find what you want.</p>
+        </div>
+
+        <div id="posts-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            <div class="col-span-full py-20 text-center">
+                <div class="inline-block w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mb-4"></div>
+                <p class="text-gray-400 dark:text-gray-200 font-bold">Loading...</p>
+            </div>
+        </div>
+    </main>
+
+    <a href="dashboard.html" class="fixed bottom-8 right-8 bg-blue-600 text-white p-5 rounded-3xl shadow-2xl shadow-blue-200 dark:shadow-blue-800 hover:bg-blue-800 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+    </a>
+    <script type="module" src="index.js"></script>
+    <script src="universal.js"></script>
+</body>
+</html>
