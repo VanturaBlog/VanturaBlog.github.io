@@ -3,38 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile | DevLog</title>
+    <title>My Profile | VanturaBlog</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-100/50 text-gray-900">
+<body class="bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-200">
 
-    <header class="p-4 max-w-6xl mx-auto flex justify-between items-center bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+    <header class="p-4 max-w-6xl mx-auto flex justify-between items-center bg-white/80 dark:bg-black/75 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 dark:border-gray-800">
         <a href="index.html" class="text-3xl font-black tracking-tighter">
-    DEV<span class="text-blue-600">LOG.</span>
+    V<span class="text-blue-600">BLOG.</span>
 </a>
         <button id="logout-btn" class="bg-red-600/85 text-white px-6 py-2 rounded-xl font-bold text-sm">Logout</button>
     </header>
 
     <main class="max-w-4xl mx-auto px-4 py-12 flex flex-col items-center">
         <div class="relative mb-6">
-            <div id="user-icon" class="w-32 h-32 bg-blue-100 rounded-[2.5rem] flex items-center justify-center text-4xl shadow-inner border-4 border-white">
-                <span class="animate-pulse text-blue-300">...</span>
+            <div id="user-icon" class="w-32 h-32 bg-blue-100 dark:bg-blue-950 rounded-full flex items-center justify-center text-4xl shadow-inner">
+                <span class=""><svg width="150" height="150" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="c"><circle cx="12" cy="12" r="12"/></clipPath></defs><circle cx="12" cy="12" r="12" fill="#E2E8F0"/><g clip-path="url(#c)"><circle cx="12" cy="9" r="5.5" fill="#94A3B8"/><path d="M2 21C2 17 5 14.5 9 14.5H15C19 14.5 22 17 22 21V25H2V21Z" fill="#94A3B8"/></g></svg></span>
             </div>
         </div>
 
         <div class="text-center">
-            <h1 id="display-name" class="text-3xl font-black mb-1 font-sans">Loading...</h1>
+            <h1 id="display-name" class="text-3xl font-black dark:font-white mb-1 font-sans">Loading...</h1>
             <p id="display-email" class="text-black-400 font-medium"></p>
         </div>
         
 
-        <div class="bg-gray-100 px-3 py-5 mt-12 w-full max-w-md space-y-4 shadow-2xl rounded-xl">
-            <a href="my-posts.html" class="block w-full text-center bg-white border border-gray-100 p-4 rounded-3xl font-bold hover:shadow-lg transition">Manage My Posts</a>
-            <a href="dashboard.html" class="block w-full text-center bg-blue-600 text-white p-4 rounded-3xl font-black shadow-lg shadow-blue-100 hover:bg-blue-700 transition">Write New Article</a>
+        <div class="bg-gray-100 dark:bg-gray-900 px-3 py-6 mt-12 w-full max-w-md space-y-4 shadow-2xl rounded-xl">
+            <a href="my-posts.html" class="block w-full text-center bg-white dark:bg-black border border-gray-100 dark:border-gray-950 p-4 rounded-3xl font-bold hover:shadow-lg transition">Manage My Posts</a>
+            <a href="dashboard.html" class="block w-full text-center bg-blue-600 text-white p-4 rounded-3xl font-black shadow-lg shadow-blue-100 dark:shadow-blue-900 hover:bg-blue-700 transition">Write New Article</a>
         </div>
     </main>
 
     <script type="module" src="profile.js"></script>
+    <script src="themecheck.js"></script>
 </body>
 </html>

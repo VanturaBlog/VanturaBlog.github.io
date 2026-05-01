@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (user) {
             let profileMarkup = "";
             if (user.photoURL) {
-                profileMarkup = `<img src="${user.photoURL}" class="w-10 h-10 rounded-full border border-gray-200">`;
+                profileMarkup = `<img src="${user.photoURL}" class="w-10 h-10 rounded-full border border-gray-200 dark:border-gray-950">`;
             } else {
                 const initial = (user.displayName || "U").charAt(0).toUpperCase();
                 profileMarkup = `<div class="w-10 h-10 bg-gray-800 text-white flex items-center justify-center rounded-full font-black text-lg font-sans">${initial}</div>`;
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             querySnapshot.forEach((doc) => {
                 const post = doc.data();
                 const postElement = document.createElement('div');
-                postElement.className = "card-old-ui cursor-pointer group bg-white dark:bg-black/50 shadow-md dark:shadow-gray-800 shadow-gray-200 p-[2.5rem] rounded-3xl";
+                postElement.className = "card-old-ui cursor-pointer group bg-white dark:bg-gray-900 shadow-md dark:shadow-gray-700 shadow-gray-200 p-[2.5rem] rounded-3xl";
                 postElement.innerHTML = `
                     <div onclick="location.href='post-details.html?id=${doc.id}'">
                         <h2 class="text-2xl font-black mb-2 truncate-title">${post.title}</h2>
