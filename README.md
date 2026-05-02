@@ -1,4 +1,4 @@
-[![VanturaBlog](https://img.shields.io/badge/VanturaBlog-+-FFFFFF.svg?style=flat-square)](https://vanturablog.github.io)
+[![VanturaBlog](https://img.shields.io/badge/VanturaBlog-+-1746bd.svg?style=flat-square)](https://vanturablog.github.io)
 
 
 ---
