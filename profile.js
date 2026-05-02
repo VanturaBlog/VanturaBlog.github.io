@@ -30,7 +30,7 @@ onAuthStateChanged(auth, (user) => {
         // 2. LOGIC: Decide which logo to show
         if (user.photoURL) {
             // Person logged in with Google: Show their real photo
-            iconContainer.innerHTML = `<img src="${user.photoURL}" class="w-full h-full object-cover shadow-sm">`;
+            iconContainer.innerHTML = `<img src="${user.photoURL}" class="w-full h-full object-cover shadow-sm round ed-full">`;
             iconContainer.style.background = "transparent";
          }
     } else {
