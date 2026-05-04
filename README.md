@@ -9,5 +9,5 @@ A website made specially for students. Which will help students to find their st
 
 ### Features ✨
 
-#### 1:
+#### 1: Posting
 Here you can find community made posts find what you want. You can ask moderaters to add what want. Even if you want you can add your own post.
